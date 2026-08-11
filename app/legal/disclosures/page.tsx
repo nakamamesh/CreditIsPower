@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { disclaimers } from "@/lib/copy/compliance";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Important Disclosures",
@@ -81,10 +82,31 @@ export default function DisclosuresPage() {
               Contact
             </h2>
             <p className="mt-3">
-              Questions:{" "}
-              <span className="text-ink">compliance@creditispower.example</span>{" "}
-              (replace with your operating email / mailing address).
+              Compliance questions:{" "}
+              <a
+                href={`mailto:${siteConfig.contact.compliance}`}
+                className="font-medium text-ink underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald"
+              >
+                {siteConfig.contact.compliance}
+              </a>
+              . General contact:{" "}
+              <a
+                href={`mailto:${siteConfig.contact.hello}`}
+                className="font-medium text-ink underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald"
+              >
+                {siteConfig.contact.hello}
+              </a>
+              {" "}
+              or{" "}
+              <a
+                href="/book"
+                className="font-medium text-ink underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald"
+              >
+                book a free call
+              </a>
+              .
             </p>
+            <p className="mt-3 text-xs text-slate">{siteConfig.mailingAddressNote}</p>
           </section>
         </div>
       </article>

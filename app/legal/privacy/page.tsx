@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -23,10 +24,30 @@ export default function PrivacyPage() {
             </h2>
             <p className="mt-3">
               Credit is Power (&quot;we,&quot; &quot;us&quot;) operates this marketing website and
-              related consultation booking experience. Contact:{" "}
-              <span className="text-ink">privacy@creditispower.example</span>{" "}
-              (replace with your operating email).
+              related consultation booking experience. Privacy inquiries:{" "}
+              <a
+                href={`mailto:${siteConfig.contact.privacy}`}
+                className="font-medium text-ink underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald"
+              >
+                {siteConfig.contact.privacy}
+              </a>
+              . General contact:{" "}
+              <a
+                href={`mailto:${siteConfig.contact.hello}`}
+                className="font-medium text-ink underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald"
+              >
+                {siteConfig.contact.hello}
+              </a>
+              , or{" "}
+              <a
+                href="/book"
+                className="font-medium text-ink underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald"
+              >
+                book a call
+              </a>
+              .
             </p>
+            <p className="mt-3 text-xs text-slate">{siteConfig.mailingAddressNote}</p>
           </section>
           <section>
             <h2 className="font-[family-name:var(--font-syne)] text-xl font-semibold text-navy">
@@ -69,7 +90,7 @@ export default function PrivacyPage() {
             <p className="mt-3">
               You may request access, correction, or deletion of personal
               information we hold about you, subject to applicable law. Contact
-              us using the address above.
+              us using the email addresses above.
             </p>
           </section>
         </div>

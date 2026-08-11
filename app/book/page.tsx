@@ -30,6 +30,15 @@ export default function BookPage() {
           <li>Questions to bring: goals, timeline, any open denials</li>
           <li>No obligation — and we never promise score outcomes</li>
         </ul>
+        <p className="mt-6 text-sm text-white/70">
+          Prefer email?{" "}
+          <a
+            href={`mailto:${siteConfig.contact.hello}`}
+            className="font-semibold text-emerald-soft underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-soft"
+          >
+            {siteConfig.contact.hello}
+          </a>
+        </p>
       </Section>
 
       <Section title="Pick a time">

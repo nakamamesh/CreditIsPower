@@ -11,7 +11,7 @@ const legalLinks = [
 export function SiteFooter() {
   return (
     <footer className="bg-navy text-white">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-[1.2fr_1fr_1fr] md:px-8">
+      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-2 lg:grid-cols-4 md:px-8">
         <div>
           <p className="font-[family-name:var(--font-syne)] text-xl font-semibold">
             {siteConfig.name}
@@ -57,6 +57,33 @@ export function SiteFooter() {
             ))}
           </ul>
         </nav>
+
+        <div>
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-emerald-soft">
+            Contact
+          </p>
+          <ul className="space-y-2 text-sm text-white/85">
+            <li>
+              <Link
+                href="/book"
+                className="transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-soft"
+              >
+                Book a free call
+              </Link>
+            </li>
+            <li>
+              <a
+                href={`mailto:${siteConfig.contact.hello}`}
+                className="transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-soft"
+              >
+                {siteConfig.contact.hello}
+              </a>
+            </li>
+          </ul>
+          <p className="mt-4 text-xs leading-relaxed text-white/55">
+            {siteConfig.mailingAddressNote}
+          </p>
+        </div>
       </div>
 
       <div className="border-t border-white/10 px-6 py-6 md:px-8">

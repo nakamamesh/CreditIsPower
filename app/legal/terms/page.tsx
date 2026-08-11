@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Terms of Use",
@@ -74,9 +75,30 @@ export default function TermsPage() {
             </h2>
             <p className="mt-3">
               Questions about these Terms:{" "}
-              <span className="text-ink">legal@creditispower.example</span>{" "}
-              (replace with your operating email).
+              <a
+                href={`mailto:${siteConfig.contact.legal}`}
+                className="font-medium text-ink underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald"
+              >
+                {siteConfig.contact.legal}
+              </a>
+              . General inquiries:{" "}
+              <a
+                href={`mailto:${siteConfig.contact.hello}`}
+                className="font-medium text-ink underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald"
+              >
+                {siteConfig.contact.hello}
+              </a>
+              {" "}
+              or{" "}
+              <a
+                href="/book"
+                className="font-medium text-ink underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald"
+              >
+                book a call
+              </a>
+              .
             </p>
+            <p className="mt-3 text-xs text-slate">{siteConfig.mailingAddressNote}</p>
           </section>
         </div>
       </article>
