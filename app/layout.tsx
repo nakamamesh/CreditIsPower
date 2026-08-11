@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Syne, Source_Sans_3 } from "next/font/google";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
 
 const syne = Syne({
@@ -26,7 +28,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${syne.variable} ${sourceSans.variable}`}>
-      <body>{children}</body>
+      <body className="min-h-screen font-[family-name:var(--font-source-sans)]">
+        <SiteHeader />
+        {children}
+        <SiteFooter />
+      </body>
     </html>
   );
 }
