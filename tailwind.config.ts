@@ -16,6 +16,7 @@ const config: Config = {
         ink: "#0A0F1A",
         slate: "#64748B",
         gold: "#C6A75E",
+        white: "#FFFFFF",
       },
     },
   },
