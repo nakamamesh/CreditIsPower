@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { CtaButton } from "@/components/cta-button";
 import { FadeIn } from "@/components/motion";
@@ -5,12 +6,20 @@ import { siteConfig } from "@/lib/site";
 
 export function HeroHome() {
   return (
-    <section className="relative overflow-hidden bg-navy text-white">
+    <section className="relative min-h-[78vh] overflow-hidden bg-navy text-white md:min-h-[88vh]">
+      <Image
+        src="/images/theme-05-relief.png"
+        alt="Man stepping outside after a consultation, looking calm and ready for the next step"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-[center_30%]"
+      />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,#0B1F3A_0%,#123056_45%,rgba(13,148,136,0.35)_140%)]"
+        className="absolute inset-0 bg-[linear-gradient(115deg,rgba(11,31,58,0.92)_0%,rgba(11,31,58,0.78)_42%,rgba(13,148,136,0.35)_140%)]"
       />
-      <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-16 md:px-8 md:pb-28 md:pt-24">
+      <div className="relative mx-auto flex min-h-[78vh] max-w-6xl flex-col justify-end px-6 pb-20 pt-16 md:min-h-[88vh] md:justify-center md:px-8 md:pb-28 md:pt-24">
         <FadeIn>
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-soft">
             50-Point Proven Plan

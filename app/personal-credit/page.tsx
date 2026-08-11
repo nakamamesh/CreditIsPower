@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BenefitGrid } from "@/components/benefit-grid";
 import { CtaButton } from "@/components/cta-button";
+import { FadeIn } from "@/components/motion";
+import { SceneImage } from "@/components/scene-image";
 import { Section } from "@/components/section";
 import { personalBenefits } from "@/lib/copy/benefits";
 import { disclaimers } from "@/lib/copy/compliance";
@@ -56,12 +58,23 @@ export default function PersonalCreditPage() {
       <BenefitGrid benefits={personalBenefits} />
 
       <Section id="build" eyebrow="Build" title="Create positive momentum">
-        <p className="max-w-2xl text-base leading-relaxed text-slate">
-          Building means establishing on-time history, thoughtful utilization,
-          and durable habits that support stronger profiles over time. We help
-          you prioritize the actions that match your goals — without promising
-          a specific score.
-        </p>
+        <div className="grid items-center gap-10 md:grid-cols-2">
+          <div>
+            <p className="max-w-2xl text-base leading-relaxed text-slate">
+              Building means establishing on-time history, thoughtful utilization,
+              and durable habits that support stronger profiles over time. We help
+              you prioritize the actions that match your goals — without promising
+              a specific score.
+            </p>
+          </div>
+          <FadeIn>
+            <SceneImage
+              src="/images/theme-03-hope.png"
+              alt="Hopeful couple planning their financial next steps together at home"
+              sizes="(max-width: 768px) 100vw, 560px"
+            />
+          </FadeIn>
+        </div>
       </Section>
 
       <Section
@@ -70,14 +83,25 @@ export default function PersonalCreditPage() {
         title="Address inaccurate or incomplete items"
         className="bg-white"
       >
-        <p className="max-w-2xl text-base leading-relaxed text-slate">
-          Repair focuses on reviewing your reports and disputing information
-          that may be inaccurate, incomplete, or unverifiable. Clarity and
-          documentation matter more than hype.
-        </p>
-        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-slate">
-          {disclaimers.selfDispute}
-        </p>
+        <div className="grid items-center gap-10 md:grid-cols-2">
+          <FadeIn>
+            <SceneImage
+              src="/images/theme-01-denied.png"
+              alt="Woman looking frustrated at a laptop after a difficult credit application moment"
+              sizes="(max-width: 768px) 100vw, 560px"
+            />
+          </FadeIn>
+          <div>
+            <p className="max-w-2xl text-base leading-relaxed text-slate">
+              Repair focuses on reviewing your reports and disputing information
+              that may be inaccurate, incomplete, or unverifiable. Clarity and
+              documentation matter more than hype.
+            </p>
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-slate">
+              {disclaimers.selfDispute}
+            </p>
+          </div>
+        </div>
       </Section>
 
       <Section id="monitor" eyebrow="Monitor" title="Catch changes early">
@@ -93,11 +117,22 @@ export default function PersonalCreditPage() {
         title="Debt mediation support"
         className="bg-cloud"
       >
-        <p className="max-w-2xl text-base leading-relaxed text-slate">
-          When balances make progress harder, we can discuss debt mediation
-          options as part of a broader plan. Outcomes depend on your creditors
-          and circumstances — we do not guarantee settlements.
-        </p>
+        <div className="grid items-center gap-10 md:grid-cols-2">
+          <div>
+            <p className="max-w-2xl text-base leading-relaxed text-slate">
+              When balances make progress harder, we can discuss debt mediation
+              options as part of a broader plan. Outcomes depend on your creditors
+              and circumstances — we do not guarantee settlements.
+            </p>
+          </div>
+          <FadeIn>
+            <SceneImage
+              src="/images/theme-02-bills.png"
+              alt="Man sorting through paper statements and bills at a kitchen table"
+              sizes="(max-width: 768px) 100vw, 560px"
+            />
+          </FadeIn>
+        </div>
       </Section>
 
       <Section eyebrow="FAQ" title="Common questions">

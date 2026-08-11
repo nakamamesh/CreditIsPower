@@ -4,8 +4,10 @@ import { CtaButton } from "@/components/cta-button";
 import { HeroHome } from "@/components/hero-home";
 import { HowItWorks } from "@/components/how-it-works";
 import { PathwayCards } from "@/components/pathway-cards";
+import { SceneImage } from "@/components/scene-image";
 import { Section } from "@/components/section";
 import { TrustStrip } from "@/components/trust-strip";
+import { FadeIn } from "@/components/motion";
 import { personalBenefits } from "@/lib/copy/benefits";
 import { disclaimers } from "@/lib/copy/compliance";
 import Link from "next/link";
@@ -27,21 +29,32 @@ export default function Home() {
         title="The 50-Point Proven Plan"
         className="bg-cloud"
       >
-        <p className="max-w-2xl text-base leading-relaxed text-slate">
-          A structured approach to diagnose priorities, clean up inaccuracies,
-          build positive history, and monitor what matters — with clarity at
-          every step.
-        </p>
-        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-slate">
-          {disclaimers.planNotScorePromise}
-        </p>
-        <div className="mt-8">
-          <Link
-            href="/50-point-plan"
-            className="text-sm font-semibold text-emerald underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald"
-          >
-            Explore the full plan →
-          </Link>
+        <div className="grid items-center gap-10 md:grid-cols-2">
+          <div>
+            <p className="max-w-2xl text-base leading-relaxed text-slate">
+              A structured approach to diagnose priorities, clean up inaccuracies,
+              build positive history, and monitor what matters — with clarity at
+              every step.
+            </p>
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-slate">
+              {disclaimers.planNotScorePromise}
+            </p>
+            <div className="mt-8">
+              <Link
+                href="/50-point-plan"
+                className="text-sm font-semibold text-emerald underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald"
+              >
+                Explore the full plan →
+              </Link>
+            </div>
+          </div>
+          <FadeIn>
+            <SceneImage
+              src="/images/theme-02-bills.png"
+              alt="Older man at a kitchen table surrounded by household bills, looking concerned"
+              sizes="(max-width: 768px) 100vw, 560px"
+            />
+          </FadeIn>
         </div>
       </Section>
       <HowItWorks />

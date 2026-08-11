@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FadeIn } from "@/components/motion";
+import { SceneImage } from "@/components/scene-image";
 import { Section } from "@/components/section";
 
 const pathways = [
@@ -27,6 +28,22 @@ export function PathwayCards() {
       title="Build. Repair. Monitor."
       className="bg-white"
     >
+      <div className="mb-12 grid items-center gap-10 md:grid-cols-2">
+        <FadeIn>
+          <SceneImage
+            src="/images/theme-03-hope.png"
+            alt="Couple reviewing plans together on a tablet with hopeful focus"
+            sizes="(max-width: 768px) 100vw, 560px"
+          />
+        </FadeIn>
+        <FadeIn delay={0.08}>
+          <p className="max-w-md text-base leading-relaxed text-slate">
+            Stronger credit is leverage for the decisions that matter —
+            housing, rates, and everyday flexibility. We meet you where you are
+            and map a clear path forward.
+          </p>
+        </FadeIn>
+      </div>
       <ul className="grid gap-6 md:grid-cols-3">
         {pathways.map((item, index) => (
           <FadeIn key={item.href} delay={index * 0.06}>

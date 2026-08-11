@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { BenefitGrid } from "@/components/benefit-grid";
 import { CtaButton } from "@/components/cta-button";
+import { FadeIn } from "@/components/motion";
+import { SceneImage } from "@/components/scene-image";
 import { Section } from "@/components/section";
 import { businessBenefits } from "@/lib/copy/benefits";
 import { disclaimers } from "@/lib/copy/compliance";
@@ -20,16 +22,28 @@ export default function BusinessCreditPage() {
         className="bg-navy"
         tone="dark"
       >
-        <p className="max-w-2xl text-base leading-relaxed text-white/80">
-          Business credit is a separate journey. Done thoughtfully, it can
-          support vendor terms, financing conversations, and less reliance on
-          personal guarantees over time.
-        </p>
-        <p className="mt-4 max-w-2xl text-sm text-white/65">
-          Business credit is not an overnight fix for personal scores.
-        </p>
-        <div className="mt-8">
-          <CtaButton href="/book">Book Free Consultation</CtaButton>
+        <div className="grid items-center gap-10 md:grid-cols-2">
+          <div>
+            <p className="max-w-2xl text-base leading-relaxed text-white/80">
+              Business credit is a separate journey. Done thoughtfully, it can
+              support vendor terms, financing conversations, and less reliance on
+              personal guarantees over time.
+            </p>
+            <p className="mt-4 max-w-2xl text-sm text-white/65">
+              Business credit is not an overnight fix for personal scores.
+            </p>
+            <div className="mt-8">
+              <CtaButton href="/book">Book Free Consultation</CtaButton>
+            </div>
+          </div>
+          <FadeIn>
+            <SceneImage
+              src="/images/theme-04-business.png"
+              alt="Small-business owner reviewing vendor paperwork at a shop counter"
+              className="ring-1 ring-white/10"
+              sizes="(max-width: 768px) 100vw, 560px"
+            />
+          </FadeIn>
         </div>
       </Section>
 
