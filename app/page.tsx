@@ -53,6 +53,7 @@ export default function Home() {
               src="/images/theme-02-bills.png"
               alt="Older man at a kitchen table surrounded by household bills, looking concerned"
               sizes="(max-width: 768px) 100vw, 560px"
+              objectPosition="center 25%"
             />
           </FadeIn>
         </div>

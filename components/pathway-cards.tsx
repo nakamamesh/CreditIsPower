@@ -34,6 +34,7 @@ export function PathwayCards() {
             src="/images/theme-03-hope.png"
             alt="Couple reviewing plans together on a tablet with hopeful focus"
             sizes="(max-width: 768px) 100vw, 560px"
+            objectPosition="center 30%"
           />
         </FadeIn>
         <FadeIn delay={0.08}>

@@ -31,8 +31,8 @@ export function Section({
       id={id}
       className={
         className
-          ? `px-6 py-16 md:px-8 md:py-24 ${className}`
-          : "px-6 py-16 md:px-8 md:py-24"
+          ? `scroll-mt-24 px-6 py-16 md:px-8 md:py-24 ${className}`
+          : "scroll-mt-24 px-6 py-16 md:px-8 md:py-24"
       }
     >
       <div className="mx-auto max-w-6xl">

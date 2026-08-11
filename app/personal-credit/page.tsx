@@ -72,6 +72,7 @@ export default function PersonalCreditPage() {
               src="/images/theme-03-hope.png"
               alt="Hopeful couple planning their financial next steps together at home"
               sizes="(max-width: 768px) 100vw, 560px"
+              objectPosition="center 30%"
             />
           </FadeIn>
         </div>
@@ -89,6 +90,7 @@ export default function PersonalCreditPage() {
               src="/images/theme-01-denied.png"
               alt="Woman looking frustrated at a laptop after a difficult credit application moment"
               sizes="(max-width: 768px) 100vw, 560px"
+              objectPosition="center 22%"
             />
           </FadeIn>
           <div>
@@ -130,6 +132,7 @@ export default function PersonalCreditPage() {
               src="/images/theme-02-bills.png"
               alt="Man sorting through paper statements and bills at a kitchen table"
               sizes="(max-width: 768px) 100vw, 560px"
+              objectPosition="center 25%"
             />
           </FadeIn>
         </div>

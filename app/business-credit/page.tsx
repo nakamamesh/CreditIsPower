@@ -42,6 +42,7 @@ export default function BusinessCreditPage() {
               alt="Small-business owner reviewing vendor paperwork at a shop counter"
               className="ring-1 ring-white/10"
               sizes="(max-width: 768px) 100vw, 560px"
+              objectPosition="center 28%"
             />
           </FadeIn>
         </div>
