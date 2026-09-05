@@ -2,12 +2,6 @@ import Link from "next/link";
 import { disclaimers } from "@/lib/copy/compliance";
 import { siteConfig } from "@/lib/site";
 
-const legalLinks = [
-  { label: "Privacy", href: "/legal/privacy" },
-  { label: "Terms", href: "/legal/terms" },
-  { label: "Disclosures", href: "/legal/disclosures" },
-] as const;
-
 export function SiteFooter() {
   return (
     <footer className="bg-navy text-white">
@@ -45,7 +39,7 @@ export function SiteFooter() {
             Legal
           </p>
           <ul className="space-y-2">
-            {legalLinks.map((item) => (
+            {siteConfig.legalNav.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
@@ -79,6 +73,14 @@ export function SiteFooter() {
                 {siteConfig.contact.hello}
               </a>
             </li>
+            <li>
+              <a
+                href={`mailto:${siteConfig.contact.privacy}`}
+                className="transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-soft"
+              >
+                {siteConfig.contact.privacy}
+              </a>
+            </li>
           </ul>
           <p className="mt-4 text-xs leading-relaxed text-white/55">
             {siteConfig.mailingAddressNote}
@@ -90,6 +92,22 @@ export function SiteFooter() {
         <div className="mx-auto max-w-6xl space-y-3 text-xs leading-relaxed text-white/60">
           <p>{disclaimers.croAFooter}</p>
           <p>{disclaimers.resultsVary}</p>
+          <p>
+            We do not sell your personal information.{" "}
+            <Link
+              href="/legal/do-not-sell"
+              className="text-white/80 underline-offset-2 hover:underline"
+            >
+              Do Not Sell or Share
+            </Link>
+            {" · "}
+            <Link
+              href="/legal/privacy"
+              className="text-white/80 underline-offset-2 hover:underline"
+            >
+              Privacy Policy
+            </Link>
+          </p>
         </div>
       </div>
     </footer>

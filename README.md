@@ -21,6 +21,9 @@ npm run dev                  # http://localhost:3000
 3. **Physical address** — Do not invent an HQ. When the registered entity mailing address is confirmed, add it to legal pages and the footer contact block.
 4. **Counsel review** — Have an attorney review Privacy, Terms, and Disclosures before paid acquisition or enrollments.
 5. **Deploy** — Vercel (or similar) with the Calendly env var set.
+6. **Client report pull** — On the consult, send this IdentityIQ link ($1 / 7-day trial, offer code `431299Z9`):
+   https://www.identityiq.com/sc-securemax.aspx?offercode=431299Z9
+   (Also in `lib/site.ts` as `identityIqOfferUrl` and in the client SOP.)
 
 ## Scripts
 

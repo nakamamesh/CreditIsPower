@@ -17,4 +17,10 @@ describe("siteConfig", () => {
       /physical mailing address|registered entity/,
     );
   });
+
+  it("stores the IdentityIQ SecureMax offer link with our offer code", () => {
+    expect(siteConfig.identityIqOfferUrl).toBe(
+      "https://www.identityiq.com/sc-securemax.aspx?offercode=431299Z9",
+    );
+  });
 });

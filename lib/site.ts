@@ -23,4 +23,21 @@ export const siteConfig = {
   get calendlyUrl() {
     return process.env.NEXT_PUBLIC_CALENDLY_URL?.trim() ?? "";
   },
+  /**
+   * Client credit-report pull (IdentityIQ SecureMax).
+   * $1 for 7-day trial — give this on the consult call / in enrollment email.
+   * Offer code 431299Z9 is ours; do not swap for a generic IdentityIQ URL.
+   * Always disclose: monitoring is a paid product; trial converts unless cancelled.
+   */
+  identityIqOfferUrl:
+    "https://www.identityiq.com/sc-securemax.aspx?offercode=431299Z9",
+  legalNav: [
+    { label: "Privacy", href: "/legal/privacy" },
+    { label: "Terms", href: "/legal/terms" },
+    { label: "Disclosures", href: "/legal/disclosures" },
+    {
+      label: "Do Not Sell or Share",
+      href: "/legal/do-not-sell",
+    },
+  ],
 } as const;
